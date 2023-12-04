@@ -4,10 +4,13 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
+  Stack,
   Typography,
 } from "@mui/material";
 import Image from "next/image";
-import banner from "@/assests/banner.png";
+import sideBottomNews from "@/assests/side-bottom-img.png";
+import SidebarNewsCard from "./SidebarNewsCard";
+import banner from "@/assests/banners.png";
 
 const Siderbar = () => {
   return (
@@ -34,6 +37,24 @@ const Siderbar = () => {
           </CardContent>
         </CardActionArea>
       </Card>
+      <Stack my={3} columnGap={2}>
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+      </Stack>
+
+      <Box>
+        <Image
+          src={sideBottomNews}
+          height={400}
+          width={350}
+          alt="rectangle world image"
+        />
+      </Box>
     </Box>
   );
 };
